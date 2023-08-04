@@ -2,11 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import Container from 'react-bootstrap/Container'
+
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Container className="p-3">
+      <UserList
+        users={users}
+        />
+    </Container>
   );
 }
 
