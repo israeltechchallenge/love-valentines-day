@@ -2,18 +2,6 @@ import UserCard from './UserCard';
 import Container from 'react-bootstrap/Container'
 import { useState } from 'react';
 
-const [users, setUsers] = useState([])
-
-
-  const getUserData = async() => {
-    const fetched = await fetch(`https://randomuser.me/api/?inc=gender,name&noinfo&results=10`)
-    const response = await fetched.json()
-
-    setUsers(response)
-  }
-
-getUserData();
-
 const UserList = ({ users }) => {
 
   return (
