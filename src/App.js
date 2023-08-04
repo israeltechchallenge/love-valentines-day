@@ -1,17 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import Container from 'react-bootstrap/Container'
-
+import UserList from './components/UserList';
 
 function App() {
   return (
-    <Container className="p-3">
-      <UserList
-        users={users}
-        />
-    </Container>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<UserList users={users}/>}/>
+          <Route path="/about-team"/>
+          <Route path="/success-stories"/>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
