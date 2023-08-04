@@ -6,7 +6,7 @@ const [users, setUsers] = useState([])
 
 
   const getUserData = async() => {
-    const fetched = await fetch(`https://randomuser.me/api/?inc=gender,name&noinfo&results=10}`)
+    const fetched = await fetch(`https://randomuser.me/api/?inc=gender,name&noinfo&results=10`)
     const response = await fetched.json()
 
     setUsers(response)
