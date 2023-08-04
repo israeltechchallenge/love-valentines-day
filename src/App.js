@@ -6,7 +6,9 @@ import UserList from './components/UserList';
 import AboutTeam from './components/AboutTeam';
 import { useState } from 'react';
 
-const [users, setUsers] = useState([])
+function App() {
+
+  const [users, setUsers] = useState([])
 
 
   const getUserData = async() => {
@@ -18,7 +20,6 @@ const [users, setUsers] = useState([])
 
 getUserData();
 
-function App() {
   return (
     <div className="App">
       <BrowserRouter>
